@@ -99,13 +99,15 @@
 		6A2114072860AC3F000309D9 /* TakeHomeExercise */ = {
 			isa = PBXGroup;
 			children = (
-				6A2114082860AC3F000309D9 /* AppDelegate.swift */,
-				6A21140A2860AC3F000309D9 /* SceneDelegate.swift */,
-				6A21140C2860AC3F000309D9 /* ViewController.swift */,
-				6A21140E2860AC3F000309D9 /* Main.storyboard */,
-				6A2114112860AC40000309D9 /* Assets.xcassets */,
-				6A2114132860AC40000309D9 /* LaunchScreen.storyboard */,
-				6A2114162860AC40000309D9 /* Info.plist */,
+				6A2114482860DBC2000309D9 /* App */,
+				6A2114492860DBE6000309D9 /* Scene */,
+				6A2114562860E0E3000309D9 /* Repositories */,
+				6A2114522860DFDE000309D9 /* DataLayer */,
+				6A2114512860DFC1000309D9 /* Networking */,
+				6A2114502860DF64000309D9 /* TakeHomeKit */,
+				6A21144A2860DC38000309D9 /* Storyboards */,
+				6A21144B2860DC8C000309D9 /* Resources */,
+				6A21144C2860DCFD000309D9 /* Configurations */,
 			);
 			path = TakeHomeExercise;
 			sourceTree = "<group>";
@@ -125,6 +127,124 @@
 				6A21142B2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift */,
 			);
 			path = TakeHomeExerciseUITests;
+			sourceTree = "<group>";
+		};
+		6A2114482860DBC2000309D9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6A21140A2860AC3F000309D9 /* SceneDelegate.swift */,
+				6A2114082860AC3F000309D9 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6A2114492860DBE6000309D9 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6A21140C2860AC3F000309D9 /* ViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		6A21144A2860DC38000309D9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6A21140E2860AC3F000309D9 /* Main.storyboard */,
+				6A2114132860AC40000309D9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6A21144B2860DC8C000309D9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6A2114112860AC40000309D9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6A21144C2860DCFD000309D9 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				6A2114162860AC40000309D9 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		6A21144D2860DDDA000309D9 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		6A21144E2860DE52000309D9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		6A21144F2860DF3E000309D9 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		6A2114502860DF64000309D9 /* TakeHomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				6A2114552860E0B8000309D9 /* Extensions */,
+				6A21144E2860DE52000309D9 /* Utilities */,
+				6A21144F2860DF3E000309D9 /* Layouts */,
+				6A21144D2860DDDA000309D9 /* Factories */,
+			);
+			path = TakeHomeKit;
+			sourceTree = "<group>";
+		};
+		6A2114512860DFC1000309D9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6A2114522860DFDE000309D9 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6A2114542860E086000309D9 /* Model */,
+				6A2114532860DFEF000309D9 /* Services */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		6A2114532860DFEF000309D9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6A2114542860E086000309D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A2114552860E0B8000309D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6A2114562860E0E3000309D9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
