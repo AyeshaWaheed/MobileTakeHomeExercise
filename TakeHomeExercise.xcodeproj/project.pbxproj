@@ -16,6 +16,15 @@
 		6A2114202860AC40000309D9 /* TakeHomeExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21141F2860AC40000309D9 /* TakeHomeExerciseTests.swift */; };
 		6A21142A2860AC40000309D9 /* TakeHomeExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2114292860AC40000309D9 /* TakeHomeExerciseUITests.swift */; };
 		6A21142C2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21142B2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift */; };
+		6A258A762861C77E00F5429C /* TrendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A258A752861C77E00F5429C /* TrendService.swift */; };
+		6A47F8AE2862ED7900915B25 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F8AD2862ED7900915B25 /* ItemModel.swift */; };
+		6A6051572861D4AF008A5254 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6051562861D4AF008A5254 /* Reachability.swift */; };
+		6A60515E2861E2CD008A5254 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60515D2861E2CD008A5254 /* Router.swift */; };
+		6A6051602861F6B4008A5254 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60515F2861F6B4008A5254 /* TrendModel.swift */; };
+		6A6051622862041F008A5254 /* TrendRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6051612862041F008A5254 /* TrendRepository.swift */; };
+		6A6051642862D165008A5254 /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6051632862D165008A5254 /* OwnerModel.swift */; };
+		6A82F02028618A6B0093337C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A82F01F28618A6B0093337C /* ApiManager.swift */; };
+		6A82F024286193450093337C /* ApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A82F023286193450093337C /* ApiManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		6A2114252860AC40000309D9 /* TakeHomeExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2114292860AC40000309D9 /* TakeHomeExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHomeExerciseUITests.swift; sourceTree = "<group>"; };
 		6A21142B2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHomeExerciseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6A258A752861C77E00F5429C /* TrendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendService.swift; sourceTree = "<group>"; };
+		6A47F8AD2862ED7900915B25 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		6A6051562861D4AF008A5254 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		6A60515D2861E2CD008A5254 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		6A60515F2861F6B4008A5254 /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
+		6A6051612862041F008A5254 /* TrendRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRepository.swift; sourceTree = "<group>"; };
+		6A6051632862D165008A5254 /* OwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
+		6A82F01F28618A6B0093337C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		6A82F023286193450093337C /* ApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +120,7 @@
 				6A2114482860DBC2000309D9 /* App */,
 				6A2114492860DBE6000309D9 /* Scene */,
 				6A2114562860E0E3000309D9 /* Repositories */,
-				6A2114522860DFDE000309D9 /* DataLayer */,
+				6A2114542860E086000309D9 /* Model */,
 				6A2114512860DFC1000309D9 /* Networking */,
 				6A2114502860DF64000309D9 /* TakeHomeKit */,
 				6A21144A2860DC38000309D9 /* Storyboards */,
@@ -115,6 +133,7 @@
 		6A21141E2860AC40000309D9 /* TakeHomeExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A82F021286193130093337C /* Networking */,
 				6A21141F2860AC40000309D9 /* TakeHomeExerciseTests.swift */,
 			);
 			path = TakeHomeExerciseTests;
@@ -206,22 +225,17 @@
 		6A2114512860DFC1000309D9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				6A2114532860DFEF000309D9 /* Services */,
+				6A82F01E28617B370093337C /* Manager */,
+				6A82F01D28617AB20093337C /* Routes */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		6A2114522860DFDE000309D9 /* DataLayer */ = {
-			isa = PBXGroup;
-			children = (
-				6A2114542860E086000309D9 /* Model */,
-				6A2114532860DFEF000309D9 /* Services */,
-			);
-			path = DataLayer;
 			sourceTree = "<group>";
 		};
 		6A2114532860DFEF000309D9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				6A258A752861C77E00F5429C /* TrendService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -229,6 +243,9 @@
 		6A2114542860E086000309D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6A60515F2861F6B4008A5254 /* TrendModel.swift */,
+				6A47F8AD2862ED7900915B25 /* ItemModel.swift */,
+				6A6051632862D165008A5254 /* OwnerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,8 +260,42 @@
 		6A2114562860E0E3000309D9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				6A6051612862041F008A5254 /* TrendRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6A82F01D28617AB20093337C /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				6A60515D2861E2CD008A5254 /* Router.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		6A82F01E28617B370093337C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6A82F01F28618A6B0093337C /* ApiManager.swift */,
+				6A6051562861D4AF008A5254 /* Reachability.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6A82F021286193130093337C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6A82F022286193240093337C /* BaseService */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6A82F022286193240093337C /* BaseService */ = {
+			isa = PBXGroup;
+			children = (
+				6A82F023286193450093337C /* ApiManagerTests.swift */,
+			);
+			path = BaseService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +429,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A82F02028618A6B0093337C /* ApiManager.swift in Sources */,
+				6A6051642862D165008A5254 /* OwnerModel.swift in Sources */,
+				6A6051602861F6B4008A5254 /* TrendModel.swift in Sources */,
+				6A258A762861C77E00F5429C /* TrendService.swift in Sources */,
+				6A47F8AE2862ED7900915B25 /* ItemModel.swift in Sources */,
+				6A6051572861D4AF008A5254 /* Reachability.swift in Sources */,
+				6A6051622862041F008A5254 /* TrendRepository.swift in Sources */,
+				6A60515E2861E2CD008A5254 /* Router.swift in Sources */,
 				6A21140D2860AC3F000309D9 /* ViewController.swift in Sources */,
 				6A2114092860AC3F000309D9 /* AppDelegate.swift in Sources */,
 				6A21140B2860AC3F000309D9 /* SceneDelegate.swift in Sources */,
@@ -388,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A82F024286193450093337C /* ApiManagerTests.swift in Sources */,
 				6A2114202860AC40000309D9 /* TakeHomeExerciseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,7 +620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TakeHomeExercise/Info.plist;
+				INFOPLIST_FILE = TakeHomeExercise/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -587,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TakeHomeExercise/Info.plist;
+				INFOPLIST_FILE = TakeHomeExercise/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
