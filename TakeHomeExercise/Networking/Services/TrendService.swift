@@ -16,7 +16,7 @@ class TrendService: TrendServiceType {
     
     private let apiManager: ApiManagerType
     
-    init(apiManager: ApiManagerType = ApiManager()) {
+    init(apiManager: ApiManagerType) {
         self.apiManager = apiManager
     }
     

@@ -15,7 +15,7 @@ class TrendRepository: TrendRepositoryType {
     
     private let trendService: TrendServiceType
     
-    init(trendService: TrendServiceType = TrendService()) {
+    init(trendService: TrendServiceType) {
         self.trendService = trendService
     }
     
