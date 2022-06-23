@@ -17,7 +17,10 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
     @IBOutlet private weak var repositoryDescription: UILabel!
     @IBOutlet private weak var language: UILabel!
     @IBOutlet private weak var starCount: UILabel!
-    @IBOutlet private weak var languageColorView: UIView!
+    @IBOutlet private weak var languageStackView: UIStackView!
+    @IBOutlet private weak var starIcon: UIImageView!
+    @IBOutlet private weak var languageDotView: UIView!
+    @IBOutlet private weak var repoInfoStackView: UIStackView!
     
     private var viewModel: TrendingRepositoryTableViewCellViewModelType?
     
@@ -43,7 +46,8 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         profileImage.layer.cornerRadius = profileImage.bounds.height / 2
-        languageColorView.layer.cornerRadius = languageColorView.bounds.height / 2
+        languageDotView.layer.cornerRadius = languageDotView.bounds.height / 2
+        
     }
 }
 
@@ -59,6 +63,20 @@ extension TrendingRepositoryTableViewCell {
         repositoryDescription.text = viewModel?.getRepositoryDescription()
         language.text = viewModel?.getLanguage()
         starCount.text = viewModel?.getStarCount()
+        
+        //
+        languageDotView.backgroundColor = .systemBlue
+        starIcon.tintColor = .systemYellow
+        
+        viewModel?.showLanguageView = { [weak self] hidden in
+            guard let self = self else { return }
+            self.languageDotView.isHidden = true
+            self.language.isHidden = true
+            self.languageStackView.isHidden = hidden
+//            self.viewModel?.cellUpdate()
+            
+//            self.repoInfoStackView.layoutIfNeeded()
+        }
     
     }
 

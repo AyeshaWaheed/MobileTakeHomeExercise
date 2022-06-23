@@ -12,6 +12,7 @@ class TrendingRepositoriesViewController: BaseViewController {
     // MARK: - Properties
 
     private var viewModel: TrendingRepositoriesViewModelType!
+    private let refreshControl = UIRefreshControl()
 
     // MARK: - Init
 
@@ -41,9 +42,17 @@ class TrendingRepositoriesViewController: BaseViewController {
         viewModel.getTrendingRepositories()
     }
 
+    //MARK: - Configure
+    
     func configureTableView() {
         tableView.delegate = self
         tableView.prefetchDataSource = self
+    }
+    
+    //MARK: - Action Method
+    @objc func refresh(_ sender: AnyObject) {
+        tableView.showAnimatedGradientSkeleton()
+        viewModel.getTrendingRepositories()
     }
 }
 
@@ -52,11 +61,18 @@ class TrendingRepositoriesViewController: BaseViewController {
 private extension TrendingRepositoriesViewController {
     func setup() {
         registerCell()
+        setRefreshControll()
     }
 
     func registerCell() {
         let nib = UINib(nibName: "TrendingRepositoryTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "TrendingRepositoryTableViewCell")
+    }
+    
+    func setRefreshControll() {
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        refreshControl.tintColor = .clear
+        tableView.addSubview(refreshControl)
     }
 }
 
@@ -69,13 +85,16 @@ private extension TrendingRepositoriesViewController {
             guard let self = self else { return }
 
             DispatchQueue.main.async {
-                self.tableView.stopSkeletonAnimation()
-                self.tableView.hideSkeleton()
-                self.tableView.reloadData()
-                
+                self.stopShimmering()
             }
-
         }
+    }
+    
+    func stopShimmering() {
+        tableView.stopSkeletonAnimation()
+        tableView.hideSkeleton()
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 
 }
@@ -92,6 +111,7 @@ extension TrendingRepositoriesViewController: UITableViewDelegate, UITableViewDa
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cellViewModel = viewModel.cellForRowAtIndexPath(indexPath: indexPath) else { return UITableViewCell() }
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TrendingRepositoryTableViewCell", for: indexPath) as? TrendingRepositoryTableViewCell else { return UITableViewCell() }
+        cell.layoutIfNeeded()
         cell.configure(viewModel: cellViewModel)
         return cell
     }

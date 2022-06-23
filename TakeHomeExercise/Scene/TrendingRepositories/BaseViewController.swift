@@ -19,7 +19,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
         
         configureTableViewDataSource()

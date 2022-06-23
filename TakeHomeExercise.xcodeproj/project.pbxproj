@@ -218,26 +218,10 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
-		6A21144E2860DE52000309D9 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		6A21144F2860DF3E000309D9 /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Layouts;
-			sourceTree = "<group>";
-		};
 		6A2114502860DF64000309D9 /* TakeHomeKit */ = {
 			isa = PBXGroup;
 			children = (
 				6A2114552860E0B8000309D9 /* Extensions */,
-				6A21144E2860DE52000309D9 /* Utilities */,
-				6A21144F2860DF3E000309D9 /* Layouts */,
 				6A21144D2860DDDA000309D9 /* Factories */,
 			);
 			path = TakeHomeKit;
