@@ -29,6 +29,8 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <variation key="heightClass=compact-widthClass=regular" spacing="10"/>
+                    <variation key="heightClass=regular-widthClass=regular" spacing="30"/>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR2-XO-klM">
                     <rect key="frame" x="30" y="712" width="354" height="50"/>

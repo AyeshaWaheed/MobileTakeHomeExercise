@@ -37,6 +37,7 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
      
     func configure(viewModel: TrendingRepositoryTableViewCellViewModelType) {
         self.viewModel = viewModel
+        setup()
         bind()
     }
     
@@ -46,7 +47,17 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
         super.draw(rect)
         profileImage.layer.cornerRadius = profileImage.bounds.height / 2
         languageDotView.layer.cornerRadius = languageDotView.bounds.height / 2
+    }
+}
+
+//MARK: - Setup
+
+extension TrendingRepositoryTableViewCell {
+    
+    func setup() {
         
+        languageDotView.backgroundColor = .systemBlue
+        starIcon.tintColor = .systemYellow
     }
 }
 
@@ -55,6 +66,13 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
 extension TrendingRepositoryTableViewCell {
     
     func bind() {
+        
+        viewModel?.langugaeHide = { [weak self] isHide in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.languageStackView.isHidden = isHide
+            }
+        }
         
         loadImage()
         ownerName.text = viewModel?.getOwnerName()
@@ -66,7 +84,6 @@ extension TrendingRepositoryTableViewCell {
         //TODO: -
         languageDotView.backgroundColor = .systemBlue
         starIcon.tintColor = .systemYellow
-        languageStackView.isHidden = viewModel?.showLanguageView() ?? false
     }
 
     func loadImage() {
