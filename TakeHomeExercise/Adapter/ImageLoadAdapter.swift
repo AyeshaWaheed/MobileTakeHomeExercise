@@ -22,12 +22,6 @@ struct ImageLoadAdapter {
     }
     
     func prefetchImages(urls: [URL]){
-        
-//        let prefetcher = ImagePrefetcher(urls: urls) {
-//            skippedResources, failedResources, completedResources in
-//        }
-//        prefetcher.start()
-        
         ImagePrefetcher(urls: urls).start()
     }
 }

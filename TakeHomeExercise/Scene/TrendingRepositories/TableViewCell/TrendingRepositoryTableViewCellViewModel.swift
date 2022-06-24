@@ -17,9 +17,7 @@ protocol TrendingRepositoryTableViewCellViewModelType {
     func getRepositoryDescription() -> String
     func getLanguage() -> String
     func getStarCount() -> String
-//    func cellUpdate()
-    var showLanguageView: ((Bool)->())? { get set }
-//    var tableViewUpdate: (()->())? { get set }
+    func showLanguageView() -> Bool
 }
 
 class TrendingRepositoryTableViewCellViewModel: TrendingRepositoryTableViewCellViewModelType {
@@ -27,9 +25,6 @@ class TrendingRepositoryTableViewCellViewModel: TrendingRepositoryTableViewCellV
     //MARK: - Properties
     
     private let itemModel: ItemModel
-    
-    var showLanguageView: ((Bool)->())?
-//    var tableViewUpdate: (()->())?
     
     //MARK: - Init
     
@@ -55,7 +50,6 @@ class TrendingRepositoryTableViewCellViewModel: TrendingRepositoryTableViewCellV
     
     func getLanguage() -> String {
         let language = itemModel.language
-        showLanguageView?(language?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? false)
         return language ?? ""
     }
     
@@ -63,8 +57,7 @@ class TrendingRepositoryTableViewCellViewModel: TrendingRepositoryTableViewCellV
         "\(itemModel.stargazers_count)"
     }
     
-//    func cellUpdate() {
-//        tableViewUpdate?()
-//    }
-    
+    func showLanguageView() -> Bool {
+        itemModel.language?.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ?? false
+    }
 }

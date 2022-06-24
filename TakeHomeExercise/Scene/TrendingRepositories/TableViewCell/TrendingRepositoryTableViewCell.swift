@@ -20,7 +20,6 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
     @IBOutlet private weak var languageStackView: UIStackView!
     @IBOutlet private weak var starIcon: UIImageView!
     @IBOutlet private weak var languageDotView: UIView!
-    @IBOutlet private weak var repoInfoStackView: UIStackView!
     
     private var viewModel: TrendingRepositoryTableViewCellViewModelType?
     
@@ -64,20 +63,10 @@ extension TrendingRepositoryTableViewCell {
         language.text = viewModel?.getLanguage()
         starCount.text = viewModel?.getStarCount()
         
-        //
+        //TODO: -
         languageDotView.backgroundColor = .systemBlue
         starIcon.tintColor = .systemYellow
-        
-        viewModel?.showLanguageView = { [weak self] hidden in
-            guard let self = self else { return }
-            self.languageDotView.isHidden = true
-            self.language.isHidden = true
-            self.languageStackView.isHidden = hidden
-//            self.viewModel?.cellUpdate()
-            
-//            self.repoInfoStackView.layoutIfNeeded()
-        }
-    
+        languageStackView.isHidden = viewModel?.showLanguageView() ?? false
     }
 
     func loadImage() {

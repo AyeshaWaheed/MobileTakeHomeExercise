@@ -60,7 +60,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hTE-QR-3KS">
                                 <rect key="frame" x="0.0" y="150.5" width="166" height="69.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="YWZ-7m-yFk">
+                                    <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="YWZ-7m-yFk">
                                         <rect key="frame" x="0.0" y="0.0" width="70.5" height="69.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9H-ui-sLg">
@@ -164,7 +164,6 @@
                 <outlet property="languageStackView" destination="YWZ-7m-yFk" id="u8e-M2-hfx"/>
                 <outlet property="ownerName" destination="t2W-iK-URj" id="QTc-8s-Tsd"/>
                 <outlet property="profileImage" destination="lOg-wT-Yh5" id="CuR-6k-fxJ"/>
-                <outlet property="repoInfoStackView" destination="hTE-QR-3KS" id="Zj2-XF-eXJ"/>
                 <outlet property="repositoryDescription" destination="bc6-VS-JLK" id="Hhz-QU-QEx"/>
                 <outlet property="repositoryName" destination="jVP-d8-ITk" id="w07-by-saT"/>
                 <outlet property="starCount" destination="JEq-xf-1kB" id="JU3-ea-r3D"/>

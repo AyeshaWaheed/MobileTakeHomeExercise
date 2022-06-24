@@ -16,6 +16,7 @@ protocol TrendingRepositoriesViewModelType {
     func cellForRowAtIndexPath(indexPath: IndexPath) -> TrendingRepositoryTableViewCellViewModelType?
     func prefetchImages()
     var reloadTableView: (()->())? { get set }
+    var loadingErrorView: (()->())? { get set }
 }
 
 class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
@@ -27,6 +28,7 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     private var cellViewModels = [TrendingRepositoryTableViewCellViewModelType]()
     
     var reloadTableView: (()->())?
+    var loadingErrorView: (()->())?
     
     //MARK: - Init
     
@@ -42,9 +44,7 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
                 self.itemModel = repositories.items
                 self.generateCellViewModels()
             case .failure:
-//                network error screen
-                ()
-            
+                self.loadingErrorView?()
             }
         }
     }

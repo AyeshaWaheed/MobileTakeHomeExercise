@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoadingErrorView" customModule="TakeHomeExercise" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HBt-5I-TG1">
+                    <rect key="frame" x="20" y="138.5" width="374" height="447.5"/>
+                    <subviews>
+                        <view clipsSubviews="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="87V-9j-lsG">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="389"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gdshgfjgdfjd fhdusf hdusfbdf udgsf dbsfdlsf bds fdusfdu " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOq-QR-juF">
+                            <rect key="frame" x="0.0" y="409" width="374" height="38.5"/>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR2-XO-klM">
+                    <rect key="frame" x="30" y="712" width="354" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="a1Z-Ht-fGA">
+                            <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                        </constraint>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="RETRY">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                        <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="retryAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="nxq-f9-3xq"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rR2-XO-klM" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HBt-5I-TG1" secondAttribute="bottom" constant="20" id="F5R-fB-gHZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rR2-XO-klM" secondAttribute="bottom" constant="100" id="Hhd-IL-58w">
+                    <variation key="heightClass=compact-widthClass=regular" constant="10"/>
+                    <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                </constraint>
+                <constraint firstItem="HBt-5I-TG1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.8" priority="250" id="LU3-5X-SoN"/>
+                <constraint firstItem="HBt-5I-TG1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="f3z-vr-G6z">
+                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                </constraint>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rR2-XO-klM" secondAttribute="trailing" constant="30" id="fEa-PU-0bq">
+                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                </constraint>
+                <constraint firstItem="HBt-5I-TG1" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.499442" id="fun-pS-lTG"/>
+                <constraint firstItem="rR2-XO-klM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="l3t-9f-rCt">
+                    <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                </constraint>
+                <constraint firstItem="HBt-5I-TG1" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="uuU-Ro-Obl"/>
+                <constraint firstAttribute="trailing" secondItem="HBt-5I-TG1" secondAttribute="trailing" constant="20" id="wi7-mI-ewS">
+                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                </constraint>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="animationView" destination="87V-9j-lsG" id="oaj-7D-m2X"/>
+                <outlet property="errorDescription" destination="DOq-QR-juF" id="M3z-4T-gVx"/>
+                <outlet property="retryButton" destination="rR2-XO-klM" id="D1E-4s-MBI"/>
+                <outlet property="stackView" destination="HBt-5I-TG1" id="WA3-mc-hia"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="62"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

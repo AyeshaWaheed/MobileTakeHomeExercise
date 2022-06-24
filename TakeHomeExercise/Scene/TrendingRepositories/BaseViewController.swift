@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
+    lazy var loadingErrorView = LoadingErrorView.instanceFromNib()
     
     // MARK: - Life Cycle
     
