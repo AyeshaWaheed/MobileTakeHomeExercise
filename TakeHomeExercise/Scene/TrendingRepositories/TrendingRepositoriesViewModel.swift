@@ -55,7 +55,7 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     }
     
     func getNavTitle() -> String {
-        "Trending"
+        TrendingRepositoriesStrings.navTitle
     }
     
     func setNumberOfRows() -> Int {
@@ -69,5 +69,14 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     func prefetchImages() {
         let urls: [URL] = itemModel.compactMap { URL(string: $0.owner.avatar_url) }
         ImageLoadAdapter().prefetchImages(urls: urls)
+    }
+}
+
+//MARK: - Strings
+
+extension TrendingRepositoriesViewModel {
+    
+    private enum TrendingRepositoriesStrings {
+        static var navTitle = "Trending"
     }
 }

@@ -26,7 +26,7 @@ class TrendingRepositoriesViewModelTests: XCTestCase {
     }
 
     func test_getNavTitle() {
-        let expectedValue = "Trending"
+        let expectedValue = TrendingRepositoriesViewModelTestsStrings.navTitle
         XCTAssertEqual(expectedValue, sut.getNavTitle())
     }
     
@@ -60,5 +60,10 @@ class TrendingRepositoriesViewModelTests: XCTestCase {
     }
 }
 
+//MARK: - Strings
 
-
+extension TrendingRepositoriesViewModelTests {
+    private enum TrendingRepositoriesViewModelTestsStrings {
+        static var navTitle = "Trending"
+    }
+}

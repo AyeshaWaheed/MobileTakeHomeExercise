@@ -23,32 +23,32 @@ class TrendingRepositoryTableViewCellViewModelTests: XCTestCase {
     }
     
     func test_getProfileURL() {
-        let expectedValue = "https://avatars.githubusercontent.com/u/4314092?v=4"
+        let expectedValue = TrendingRepositoriesTestsStrings.profileURL
         XCTAssertEqual(expectedValue, sut.getProfileURL())
     }
     
     func test_getOwnerName() {
-        let expectedValue = "golang"
+        let expectedValue = TrendingRepositoriesTestsStrings.ownerName
         XCTAssertEqual(expectedValue, sut.getOwnerName())
     }
     
     func test_getRepositoryName() {
-        let expectedValue = "go"
+        let expectedValue = TrendingRepositoriesTestsStrings.repositoryName
         XCTAssertEqual(expectedValue, sut.getRepositoryName())
     }
     
     func test_getRepositoryDescription() {
-        let expectedValue = "The Go programming language"
+        let expectedValue = TrendingRepositoriesTestsStrings.repositoryDescription
         XCTAssertEqual(expectedValue, sut.getRepositoryDescription())
     }
     
     func test_getLanguage() {
-        let expectedValue = "Go"
+        let expectedValue = TrendingRepositoriesTestsStrings.language
         XCTAssertEqual(expectedValue, sut.getLanguage())
     }
     
     func test_getStarCount() {
-        let expectedValue = "100876"
+        let expectedValue = TrendingRepositoriesTestsStrings.starCount
         XCTAssertEqual(expectedValue, sut.getStarCount())
     }
     
@@ -56,3 +56,4 @@ class TrendingRepositoryTableViewCellViewModelTests: XCTestCase {
         XCTAssertEqual(true, sut.languageHideView(language: ""))
     }
 }
+

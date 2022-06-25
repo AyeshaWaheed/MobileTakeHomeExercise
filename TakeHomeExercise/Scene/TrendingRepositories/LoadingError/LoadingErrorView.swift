@@ -63,8 +63,16 @@ extension LoadingErrorView {
     
     func bind() {
         
-        //All strings should be added to localise file. I've added here just for assignment
-        let desc = "Something went wrong...\nAn alien is probably blocking your signal"
+        let desc = LoadingErrorViewStrings.errorDescription
         errorDescription.attributedText = desc.attributedForm(str: desc, range: NSRange(location: 23, length: 42))
+    }
+}
+
+//MARK: - Strings
+
+extension LoadingErrorView {
+    
+    private enum LoadingErrorViewStrings {
+        static var errorDescription = "Something went wrong...\nAn alien is probably blocking your signal"
     }
 }

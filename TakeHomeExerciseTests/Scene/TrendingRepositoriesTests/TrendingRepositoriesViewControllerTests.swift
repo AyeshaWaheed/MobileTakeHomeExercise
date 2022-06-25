@@ -8,6 +8,16 @@
 import XCTest
 @testable import TakeHomeExercise
 
+enum TrendingRepositoriesTestsStrings {
+    static var ownerName = "ant-design"
+    static var profileURL = "https://avatars.githubusercontent.com/u/12101536?v=4"
+    static var repositoryName = "ant-design"
+    static var repositoryDescription = "An enterprise-class UI design language and React UI library"
+    static var language = "TypeScript"
+    static var starCount = "80794"
+    static var navTitle = "Trending"
+}
+
 class TrendingRepositoriesViewControllerTests: XCTestCase {
     
     private var sut: TrendingRepositoriesViewController!
@@ -28,7 +38,7 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
     }
     
     func test_viewDidLoad_setNavTitle() {
-        let expectedValue = "Trending"
+        let expectedValue = TrendingRepositoriesTestsStrings.navTitle
         sut.loadViewIfNeeded()
         XCTAssertEqual(expectedValue, sut.title)
     }
@@ -52,12 +62,12 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
     
     func test_tableViewData_atIndex() {
         viewDidAppear()
-        XCTAssertEqual("ant-design", ownerName(row: 1))
-        XCTAssertEqual("https://avatars.githubusercontent.com/u/12101536?v=4", profileURL(row: 1))
-        XCTAssertEqual("ant-design", getRepositoryName(row: 1))
-        XCTAssertEqual("An enterprise-class UI design language and React UI library", getRepositoryDescription(row: 1))
-        XCTAssertEqual("TypeScript", getLanguage(row: 1))
-        XCTAssertEqual("80794", getStarCount(row: 1))
+        XCTAssertEqual(TrendingRepositoriesTestsStrings.ownerName, ownerName(row: 1))
+        XCTAssertEqual(TrendingRepositoriesTestsStrings.profileURL, profileURL(row: 1))
+        XCTAssertEqual(TrendingRepositoriesTestsStrings.repositoryName, getRepositoryName(row: 1))
+        XCTAssertEqual(TrendingRepositoriesTestsStrings.repositoryDescription, getRepositoryDescription(row: 1))
+        XCTAssertEqual(TrendingRepositoriesTestsStrings.language, getLanguage(row: 1))
+        XCTAssertEqual(TrendingRepositoriesTestsStrings.starCount, getStarCount(row: 1))
     }
     
     func test_errorView_initialState() {
@@ -126,6 +136,4 @@ private extension TrendingRepositoriesViewControllerTests {
         let cell = dataSource?.tableView(sut.tableView, cellForRowAt: indexPath) as? TrendingRepositoryTableViewCell
         return cell?.viewModel
     }
-  
-    
 }
