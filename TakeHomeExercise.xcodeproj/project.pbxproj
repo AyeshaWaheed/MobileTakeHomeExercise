@@ -36,6 +36,8 @@
 		6A47F938286648A500915B25 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F937286648A500915B25 /* String+Extension.swift */; };
 		6A47F9402866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F93F2866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift */; };
 		6A47F9432866A30E00915B25 /* TrendRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F9422866A30E00915B25 /* TrendRepositoryStub.swift */; };
+		6A47F9472866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F9462866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift */; };
+		6A47F94A2866E1F800915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F9492866E1F700915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift */; };
 		6A6051572861D4AF008A5254 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6051562861D4AF008A5254 /* Reachability.swift */; };
 		6A60515E2861E2CD008A5254 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60515D2861E2CD008A5254 /* Router.swift */; };
 		6A6051602861F6B4008A5254 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60515F2861F6B4008A5254 /* TrendModel.swift */; };
@@ -93,6 +95,8 @@
 		6A47F937286648A500915B25 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		6A47F93F2866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoriesViewModelTests.swift; sourceTree = "<group>"; };
 		6A47F9422866A30E00915B25 /* TrendRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRepositoryStub.swift; sourceTree = "<group>"; };
+		6A47F9462866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoriesViewControllerTests.swift; sourceTree = "<group>"; };
+		6A47F9492866E1F700915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoryTableViewCellViewModelTests.swift; sourceTree = "<group>"; };
 		6A6051562861D4AF008A5254 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6A60515D2861E2CD008A5254 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		6A60515F2861F6B4008A5254 /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
@@ -352,6 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				6A47F93F2866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift */,
+				6A47F9462866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift */,
+				6A47F9482866E1D600915B25 /* TableViewCell */,
 			);
 			path = TrendingRepositoriesTests;
 			sourceTree = "<group>";
@@ -362,6 +368,14 @@
 				6A47F9422866A30E00915B25 /* TrendRepositoryStub.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6A47F9482866E1D600915B25 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A47F9492866E1F700915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		6A82F01D28617AB20093337C /* Routes */ = {
@@ -572,7 +586,9 @@
 				6A82F024286193450093337C /* ApiManagerTests.swift in Sources */,
 				6A47F9402866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift in Sources */,
 				6A2114202860AC40000309D9 /* TakeHomeExerciseTests.swift in Sources */,
+				6A47F94A2866E1F800915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift in Sources */,
 				6A47F9432866A30E00915B25 /* TrendRepositoryStub.swift in Sources */,
+				6A47F9472866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,7 +21,7 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
     @IBOutlet private weak var starIcon: UIImageView!
     @IBOutlet private weak var languageDotView: UIView!
     
-    private var viewModel: TrendingRepositoryTableViewCellViewModelType?
+    var viewModel: TrendingRepositoryTableViewCellViewModelType?
     
     //MARK: - Properties
     
@@ -71,6 +71,7 @@ extension TrendingRepositoryTableViewCell {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.languageStackView.isHidden = isHide
+                
             }
         }
         

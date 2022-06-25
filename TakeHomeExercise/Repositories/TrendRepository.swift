@@ -24,11 +24,3 @@ class TrendRepository: TrendRepositoryType {
     }
     
 }
-
-//class TrendRepositoryStub: TrendRepositoryType {
-//    
-//    func fetchCurrentTrend(completion: @escaping(Result<TrendModel, Error>) -> Void) {
-//        completion(.success(TrendModel.mocked))
-//    }
-//    
-//}

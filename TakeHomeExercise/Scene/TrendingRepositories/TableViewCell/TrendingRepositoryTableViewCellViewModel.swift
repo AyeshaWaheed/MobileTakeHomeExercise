@@ -51,11 +51,16 @@ class TrendingRepositoryTableViewCellViewModel: TrendingRepositoryTableViewCellV
     
     func getLanguage() -> String {
         let language = itemModel.language ?? ""
-        language.isEmpty ? langugaeHide?(true) : langugaeHide?(false)
+        let isHide = languageHideView(language: language)
+        langugaeHide?(isHide)
         return language
     }
     
     func getStarCount() -> String {
         "\(itemModel.stargazers_count)"
+    }
+    
+    func languageHideView(language: String) -> Bool {
+        language.isEmpty ? true : false
     }
 }
