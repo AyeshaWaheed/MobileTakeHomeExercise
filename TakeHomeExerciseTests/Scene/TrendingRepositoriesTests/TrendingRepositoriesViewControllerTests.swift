@@ -21,14 +21,12 @@ enum TrendingRepositoriesTestsStrings {
 class TrendingRepositoriesViewControllerTests: XCTestCase {
     
     private var sut: TrendingRepositoriesViewController!
-
+    
     override func setUpWithError() throws {
-        
-        sut = TrendingRepositoriesViewController(viewModel: TrendingRepositoriesViewModel(repository: TrendRepositoryStub()))
+        sut = TrendingRepositoriesViewController(viewModel: makeBuilder())
     }
 
     override func tearDownWithError() throws {
-        
         sut = nil
     }
 
@@ -94,6 +92,11 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
 //MARK: - For Testing
 
 private extension TrendingRepositoriesViewControllerTests {
+    
+    func makeBuilder() -> TrendingRepositoriesViewModelType {
+        let repositoryStub = TrendRepositoryStub()
+        return TrendingRepositoriesViewModel(repository: repositoryStub)
+    }
     
     func viewDidAppear() {
         sut.beginAppearanceTransition(true, animated: true)

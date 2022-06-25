@@ -45,8 +45,8 @@ final class TrendingRepositoryTableViewCell: UITableViewCell, ReusableView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        profileImage.layer.cornerRadius = profileImage.bounds.height / 2
-        languageDotView.layer.cornerRadius = languageDotView.bounds.height / 2
+        profileImage.layer.cornerRadius = profileImage.bounds.midY
+        languageDotView.layer.cornerRadius = languageDotView.bounds.midY
     }
 }
 
@@ -67,7 +67,7 @@ extension TrendingRepositoryTableViewCell {
     
     func bind() {
         
-        viewModel?.langugaeHide = { [weak self] isHide in
+        viewModel?.languageHide = { [weak self] isHide in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.languageStackView.isHidden = isHide
