@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     
     // MARK: - Configure
     
-    func configureTableViewDataSource() {
+    private func configureTableViewDataSource() {
         tableView.dataSource = self
     }
 }

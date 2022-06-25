@@ -53,7 +53,7 @@ final class TrendingRepositoriesViewController: BaseViewController {
 
     //MARK: - Configure
     
-    func configureTableView() {
+    private func configureTableView() {
         tableView.delegate = self
         tableView.prefetchDataSource = self
     }
@@ -69,6 +69,7 @@ final class TrendingRepositoriesViewController: BaseViewController {
 //MARK:- Setup
 
 private extension TrendingRepositoriesViewController {
+    
     func setup() {
         registerCell()
         setRefreshControll()

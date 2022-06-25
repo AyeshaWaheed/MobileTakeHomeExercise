@@ -71,7 +71,18 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
     }
     
     func test_errorView_ifAPiFail() {
+        viewDidAppear()
         
+        let exp = expectation(description: "Waiting")
+        exp.isInverted = true
+        wait(for: [exp], timeout: 2.0)
+        
+        XCTAssertEqual(false, sut.loadingErrorView?.isHidden)
+    }
+    
+    func test_shimmer_initialState() {
+        sut.loadViewIfNeeded()
+        XCTAssertEqual(false, sut.tableView.isHiddenWhenSkeletonIsActive)
     }
 }
 

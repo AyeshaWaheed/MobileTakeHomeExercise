@@ -38,12 +38,12 @@ class TrendingRepositoriesViewModelTests: XCTestCase {
     
     func test_generateCellViewModels() {
         sut.getTrendingRepositories()
-        XCTAssertNotNil(sut.cellViewModels.count)
+        XCTAssertNotNil(sut.cellViewModels?.count)
     }
     
     func test_setNumberOfRows() {
         sut.getTrendingRepositories()
-        XCTAssertEqual(sut.cellViewModels.count, sut.setNumberOfRows())
+        XCTAssertEqual(sut.cellViewModels?.count, sut.setNumberOfRows())
     }
     
     func test_cellForRowAtIndexPath() {

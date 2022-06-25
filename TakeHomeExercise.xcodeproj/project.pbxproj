@@ -11,7 +11,6 @@
 		6A21140B2860AC3F000309D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21140A2860AC3F000309D9 /* SceneDelegate.swift */; };
 		6A2114122860AC40000309D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A2114112860AC40000309D9 /* Assets.xcassets */; };
 		6A2114152860AC40000309D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A2114132860AC40000309D9 /* LaunchScreen.storyboard */; };
-		6A2114202860AC40000309D9 /* TakeHomeExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21141F2860AC40000309D9 /* TakeHomeExerciseTests.swift */; };
 		6A21142A2860AC40000309D9 /* TakeHomeExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2114292860AC40000309D9 /* TakeHomeExerciseUITests.swift */; };
 		6A21142C2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A21142B2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift */; };
 		6A258A762861C77E00F5429C /* TrendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A258A752861C77E00F5429C /* TrendService.swift */; };
@@ -71,7 +70,6 @@
 		6A2114142860AC40000309D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A2114162860AC40000309D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A21141B2860AC40000309D9 /* TakeHomeExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A21141F2860AC40000309D9 /* TakeHomeExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHomeExerciseTests.swift; sourceTree = "<group>"; };
 		6A2114252860AC40000309D9 /* TakeHomeExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A2114292860AC40000309D9 /* TakeHomeExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHomeExerciseUITests.swift; sourceTree = "<group>"; };
 		6A21142B2860AC40000309D9 /* TakeHomeExerciseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeHomeExerciseUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				6A47F93C2866A1D400915B25 /* Scene */,
 				6A47F9412866A2E000915B25 /* Repositories */,
 				6A82F021286193130093337C /* Networking */,
-				6A21141F2860AC40000309D9 /* TakeHomeExerciseTests.swift */,
 			);
 			path = TakeHomeExerciseTests;
 			sourceTree = "<group>";
@@ -581,7 +578,6 @@
 			files = (
 				6A82F024286193450093337C /* ApiManagerTests.swift in Sources */,
 				6A47F9402866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift in Sources */,
-				6A2114202860AC40000309D9 /* TakeHomeExerciseTests.swift in Sources */,
 				6A47F94A2866E1F800915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift in Sources */,
 				6A47F9432866A30E00915B25 /* TrendRepositoryStub.swift in Sources */,
 				6A47F9472866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift in Sources */,

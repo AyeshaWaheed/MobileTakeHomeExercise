@@ -25,7 +25,7 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     
     private let repository: TrendRepositoryType?
     var itemModel: [ItemModel] = []
-    var cellViewModels = [TrendingRepositoryTableViewCellViewModelType]()
+    var cellViewModels: [TrendingRepositoryTableViewCellViewModelType]? = [TrendingRepositoryTableViewCellViewModelType]()
     
     var reloadTableView: (()->())?
     var loadingErrorView: (()->())?
@@ -59,11 +59,11 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     }
     
     func setNumberOfRows() -> Int {
-        cellViewModels.count 
+        cellViewModels?.count ?? 0
     }
     
     func cellForRowAtIndexPath(indexPath: IndexPath) -> TrendingRepositoryTableViewCellViewModelType? {
-        cellViewModels[indexPath.row]
+        cellViewModels?[indexPath.row]
     }
     
     func prefetchImages() {
