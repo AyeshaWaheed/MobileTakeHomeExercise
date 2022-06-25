@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "022e4eeb79f817748544b318b991d9a70036bbf8",
+          "version": "7.2.4"
+        }
+      },
+      {
+        "package": "Lottie",
+        "repositoryURL": "https://github.com/airbnb/lottie-ios",
+        "state": {
+          "branch": null,
+          "revision": "4a6058cbbdfe4f74aeae92c8bd51ad3b0de2a1ee",
+          "version": "3.3.0"
+        }
+      },
+      {
+        "package": "SkeletonView",
+        "repositoryURL": "https://github.com/Juanpe/SkeletonView.git",
+        "state": {
+          "branch": null,
+          "revision": "b640c1d8eee79c3a5ad6e0ae1afd2ae0fea30423",
+          "version": "1.29.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
