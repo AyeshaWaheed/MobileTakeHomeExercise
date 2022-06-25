@@ -79,11 +79,6 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
         
         XCTAssertEqual(false, sut.loadingErrorView?.isHidden)
     }
-    
-    func test_shimmer_initialState() {
-        sut.loadViewIfNeeded()
-        XCTAssertEqual(false, sut.tableView.isHiddenWhenSkeletonIsActive)
-    }
 }
 
 //MARK: - For Testing
