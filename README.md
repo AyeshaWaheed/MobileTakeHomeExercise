@@ -12,3 +12,4 @@ Screen shots:
 ![Simulator Screen Shot - iPhone 11 - 2022-06-25 at 15 23 17](https://user-images.githubusercontent.com/53968112/175770449-48d59ed5-982a-4fd0-b2ef-34c358b75fa4.png)
 ![Simulator Screen Shot - iPhone 11 - 2022-06-25 at 15 31 44](https://user-images.githubusercontent.com/53968112/175770450-da389354-5462-4619-a29a-55e4f3934102.png)
 ![Simulator Screen Shot - iPad Pro (11-inch) (3rd generation) - 2022-06-25 at 15 48 21](https://user-images.githubusercontent.com/53968112/175770459-59153100-e198-47e5-9bef-d00ec4a4789b.png)
+![Simulator Screen Shot - iPad Pro (11-inch) (3rd generation) - 2022-06-25 at 15 37 11](https://user-images.githubusercontent.com/53968112/175770505-51ae6b5d-5025-4a99-b6a4-f53dc8843e08.png)
