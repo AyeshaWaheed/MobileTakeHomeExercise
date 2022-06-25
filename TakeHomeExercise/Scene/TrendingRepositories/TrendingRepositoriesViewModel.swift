@@ -24,8 +24,8 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     //MARK: - Properties
     
     private let repository: TrendRepositoryType?
-    private var itemModel: [ItemModel] = []
-    private var cellViewModels = [TrendingRepositoryTableViewCellViewModelType]()
+    var itemModel: [ItemModel] = []
+    var cellViewModels = [TrendingRepositoryTableViewCellViewModelType]()
     
     var reloadTableView: (()->())?
     var loadingErrorView: (()->())?

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OwnerModel: Decodable {
+struct OwnerModel: Decodable, Equatable {
     let login: String
     let avatar_url: String
 }

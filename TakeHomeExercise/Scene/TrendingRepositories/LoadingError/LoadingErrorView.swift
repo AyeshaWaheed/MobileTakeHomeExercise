@@ -19,7 +19,7 @@ final class LoadingErrorView: UIView {
     var lottieAnimationView: UIView?
     var retryAction: (()->())?
     
-    //MARK: - Init
+    //MARK: - Initialize
     
     class func instanceFromNib() -> LoadingErrorView? {
        UINib(nibName: "LoadingErrorView", bundle: nil).instantiate(withOwner: self, options: nil).first as? LoadingErrorView
@@ -62,6 +62,8 @@ extension LoadingErrorView {
 extension LoadingErrorView {
 
     func bind() {
+        
+        //All strings should be added to localise file. I've added here just for assignment
         let desc = "Something went wrong...\nAn alien is probably blocking your signal"
         errorDescription.attributedText = desc.attributedForm(str: desc, range: NSRange(location: 23, length: 42))
     }

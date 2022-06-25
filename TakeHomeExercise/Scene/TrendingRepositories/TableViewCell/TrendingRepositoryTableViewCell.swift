@@ -80,10 +80,6 @@ extension TrendingRepositoryTableViewCell {
         repositoryDescription.text = viewModel?.getRepositoryDescription()
         language.text = viewModel?.getLanguage()
         starCount.text = viewModel?.getStarCount()
-        
-        //TODO: -
-        languageDotView.backgroundColor = .systemBlue
-        starIcon.tintColor = .systemYellow
     }
 
     func loadImage() {

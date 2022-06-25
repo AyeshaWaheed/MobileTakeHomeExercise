@@ -34,6 +34,8 @@
 		6A47F930286585B500915B25 /* LoadingErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F92F286585B500915B25 /* LoadingErrorView.swift */; };
 		6A47F932286585D300915B25 /* LoadingErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A47F931286585D300915B25 /* LoadingErrorView.xib */; };
 		6A47F938286648A500915B25 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F937286648A500915B25 /* String+Extension.swift */; };
+		6A47F9402866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F93F2866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift */; };
+		6A47F9432866A30E00915B25 /* TrendRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A47F9422866A30E00915B25 /* TrendRepositoryStub.swift */; };
 		6A6051572861D4AF008A5254 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6051562861D4AF008A5254 /* Reachability.swift */; };
 		6A60515E2861E2CD008A5254 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60515D2861E2CD008A5254 /* Router.swift */; };
 		6A6051602861F6B4008A5254 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A60515F2861F6B4008A5254 /* TrendModel.swift */; };
@@ -89,6 +91,8 @@
 		6A47F92F286585B500915B25 /* LoadingErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingErrorView.swift; sourceTree = "<group>"; };
 		6A47F931286585D300915B25 /* LoadingErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingErrorView.xib; sourceTree = "<group>"; };
 		6A47F937286648A500915B25 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		6A47F93F2866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepositoriesViewModelTests.swift; sourceTree = "<group>"; };
+		6A47F9422866A30E00915B25 /* TrendRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRepositoryStub.swift; sourceTree = "<group>"; };
 		6A6051562861D4AF008A5254 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6A60515D2861E2CD008A5254 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		6A60515F2861F6B4008A5254 /* TrendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 		6A21141E2860AC40000309D9 /* TakeHomeExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				6A47F93C2866A1D400915B25 /* Scene */,
+				6A47F9412866A2E000915B25 /* Repositories */,
 				6A82F021286193130093337C /* Networking */,
 				6A21141F2860AC40000309D9 /* TakeHomeExerciseTests.swift */,
 			);
@@ -332,6 +338,30 @@
 				6A47F92F286585B500915B25 /* LoadingErrorView.swift */,
 			);
 			path = LoadingError;
+			sourceTree = "<group>";
+		};
+		6A47F93C2866A1D400915B25 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6A47F93E2866A21500915B25 /* TrendingRepositoriesTests */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		6A47F93E2866A21500915B25 /* TrendingRepositoriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A47F93F2866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift */,
+			);
+			path = TrendingRepositoriesTests;
+			sourceTree = "<group>";
+		};
+		6A47F9412866A2E000915B25 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6A47F9422866A30E00915B25 /* TrendRepositoryStub.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		6A82F01D28617AB20093337C /* Routes */ = {
@@ -540,7 +570,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A82F024286193450093337C /* ApiManagerTests.swift in Sources */,
+				6A47F9402866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift in Sources */,
 				6A2114202860AC40000309D9 /* TakeHomeExerciseTests.swift in Sources */,
+				6A47F9432866A30E00915B25 /* TrendRepositoryStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

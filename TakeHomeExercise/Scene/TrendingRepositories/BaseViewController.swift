@@ -31,11 +31,13 @@ class BaseViewController: UIViewController {
         tableView.showAnimatedGradientSkeleton()
     }
     
+    // MARK: - Configure
     
     func configureTableViewDataSource() {
         tableView.dataSource = self
     }
 }
+
 
 extension BaseViewController: SkeletonTableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
