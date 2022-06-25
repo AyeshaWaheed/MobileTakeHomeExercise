@@ -23,3 +23,12 @@ extension UIView {
         return animationView
     }
 }
+
+// MARK: Reusable view
+public protocol ReusableView: AnyObject {}
+
+public extension ReusableView where Self: UIView {
+    static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}

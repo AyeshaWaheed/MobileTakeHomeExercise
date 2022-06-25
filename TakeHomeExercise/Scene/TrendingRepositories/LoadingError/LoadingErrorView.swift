@@ -8,7 +8,7 @@
 import UIKit
 
 final class LoadingErrorView: UIView {
-   
+    
     //MARK: - Properties
     
     @IBOutlet private weak var animationView: UIView!
@@ -22,7 +22,7 @@ final class LoadingErrorView: UIView {
     //MARK: - Initialize
     
     class func instanceFromNib() -> LoadingErrorView? {
-       UINib(nibName: "LoadingErrorView", bundle: nil).instantiate(withOwner: self, options: nil).first as? LoadingErrorView
+        UINib(nibName: "LoadingErrorView", bundle: nil).instantiate(withOwner: self, options: nil).first as? LoadingErrorView
     }
     
     //MARK: - Render
@@ -60,7 +60,7 @@ extension LoadingErrorView {
 //MARK: - Bind
 
 extension LoadingErrorView {
-
+    
     func bind() {
         
         //All strings should be added to localise file. I've added here just for assignment

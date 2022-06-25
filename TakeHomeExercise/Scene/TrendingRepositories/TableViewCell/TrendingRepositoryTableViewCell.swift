@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TrendingRepositoryTableViewCell: UITableViewCell {
+final class TrendingRepositoryTableViewCell: UITableViewCell, ReusableView {
     
     //MARK: - Properties
     
@@ -30,11 +30,11 @@ final class TrendingRepositoryTableViewCell: UITableViewCell {
     }
     
     required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
     }
     
     //MARK: - Configure
-     
+    
     func configure(viewModel: TrendingRepositoryTableViewCellViewModelType) {
         self.viewModel = viewModel
         setup()
@@ -81,7 +81,7 @@ extension TrendingRepositoryTableViewCell {
         language.text = viewModel?.getLanguage()
         starCount.text = viewModel?.getStarCount()
     }
-
+    
     func loadImage() {
         profileImage.loadImage(url: viewModel?.getProfileURL() ?? "")
     }

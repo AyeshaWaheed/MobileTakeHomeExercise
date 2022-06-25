@@ -48,7 +48,7 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
             }
         }
     }
-   
+    
     private func generateCellViewModels() {
         cellViewModels = itemModel.map { TrendingRepositoryTableViewCellViewModel(itemModel: $0)}
         reloadTableView?()

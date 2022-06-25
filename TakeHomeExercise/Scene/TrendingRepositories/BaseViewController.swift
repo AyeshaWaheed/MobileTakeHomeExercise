@@ -49,7 +49,7 @@ extension BaseViewController: SkeletonTableViewDataSource {
     }
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return "TrendingRepositoryTableViewCell"
+        return TrendingRepositoryTableViewCell.reuseIdentifier
     }
 }
 
