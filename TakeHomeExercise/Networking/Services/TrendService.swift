@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol TrendServiceType {
-    func fetchTrend(completion: @escaping(Result<TrendModel, Error>) -> Void)
+    func fetchTrendingRepositories(completion: @escaping(Result<TrendModel, Error>) -> Void)
 }
 
 class TrendService: TrendServiceType {
@@ -20,7 +20,7 @@ class TrendService: TrendServiceType {
         self.apiManager = apiManager
     }
     
-    func fetchTrend(completion: @escaping (Result<TrendModel, Error>) -> Void) {
+    func fetchTrendingRepositories(completion: @escaping (Result<TrendModel, Error>) -> Void) {
         
         let router = Router(endPoint: .getTrendsRepositories, method: .get, queryItems: ["q": "language=+sort:stars"])
         apiManager.request(router: router) { (result: Result<TrendModel, Error>) in

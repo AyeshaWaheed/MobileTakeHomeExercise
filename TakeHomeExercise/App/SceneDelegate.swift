@@ -24,7 +24,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationVC = UINavigationController.withNavigationBar(rootViewController: TrendingRepositoriesViewController(viewModel: viewModel))
         window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

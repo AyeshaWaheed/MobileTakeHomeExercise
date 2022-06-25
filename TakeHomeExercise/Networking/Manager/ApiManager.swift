@@ -17,12 +17,7 @@ class ApiManager: ApiManagerType {
     
     func request<T: Decodable>(router: URLRequestConvertible, completion: @escaping (Result<T,Error>) -> Void) {
         
-        guard Reachability.isConnectedToNetwork() else {
-            print("Network Error!")
-            return
-        }
-        
-        fetchTrend(urlRequest: router.urlRequest()) { response in
+        fetchTrendingRepositories(urlRequest: router.urlRequest()) { response in
             switch response {
             case .success(let data):
                 do {
@@ -44,7 +39,7 @@ class ApiManager: ApiManagerType {
 
 extension ApiManager {
     
-    func fetchTrend(urlRequest: URLRequest?, completion: @escaping (Result<Data,Error>) -> Void) {
+    func fetchTrendingRepositories(urlRequest: URLRequest?, completion: @escaping (Result<Data,Error>) -> Void) {
        
         guard let url = urlRequest?.url else {
             print("URL invalid")

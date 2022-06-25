@@ -59,6 +59,7 @@ final class TrendingRepositoriesViewController: BaseViewController {
     }
     
     //MARK: - Action Method
+    
     @objc func refresh(_ sender: AnyObject) {
         tableView.showAnimatedGradientSkeleton()
         viewModel.getTrendingRepositories()
@@ -107,7 +108,10 @@ private extension TrendingRepositoriesViewController {
         
         viewModel.loadingErrorView = { [weak self] in
             guard let self = self else { return }
-            self.loadingErrorView()
+            
+            DispatchQueue.main.async {
+                self.loadingErrorView()
+            }
         }
     }
     

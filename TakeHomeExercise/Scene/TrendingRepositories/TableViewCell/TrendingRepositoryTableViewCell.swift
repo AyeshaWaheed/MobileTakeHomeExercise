@@ -71,7 +71,6 @@ extension TrendingRepositoryTableViewCell {
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.languageStackView.isHidden = isHide
-                
             }
         }
         

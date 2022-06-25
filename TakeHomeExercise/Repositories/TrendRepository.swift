@@ -20,7 +20,7 @@ class TrendRepository: TrendRepositoryType {
     }
     
     func fetchCurrentTrend(completion: @escaping (Result<TrendModel, Error>) -> Void) {
-        trendService.fetchTrend(completion: completion)
+        trendService.fetchTrendingRepositories(completion: completion)
     }
     
 }

@@ -42,22 +42,22 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
     
     func test_tableView_initialState() {
         sut.loadViewIfNeeded()
-        XCTAssertEqual(0, sut.numberOfSection())
+        XCTAssertEqual(0, numberOfSection())
     }
     
     func test_tableView_fetchDataFromApi() {
         viewDidAppear()
-        XCTAssertEqual(3, sut.numberOfSection())
+        XCTAssertEqual(3, numberOfSection())
     }
     
     func test_tableViewData_atIndex() {
         viewDidAppear()
-        XCTAssertEqual("ant-design", sut.ownerName(row: 1))
-        XCTAssertEqual("https://avatars.githubusercontent.com/u/12101536?v=4", sut.profileURL(row: 1))
-        XCTAssertEqual("ant-design", sut.getRepositoryName(row: 1))
-        XCTAssertEqual("An enterprise-class UI design language and React UI library", sut.getRepositoryDescription(row: 1))
-        XCTAssertEqual("TypeScript", sut.getLanguage(row: 1))
-        XCTAssertEqual("80794", sut.getStarCount(row: 1))
+        XCTAssertEqual("ant-design", ownerName(row: 1))
+        XCTAssertEqual("https://avatars.githubusercontent.com/u/12101536?v=4", profileURL(row: 1))
+        XCTAssertEqual("ant-design", getRepositoryName(row: 1))
+        XCTAssertEqual("An enterprise-class UI design language and React UI library", getRepositoryDescription(row: 1))
+        XCTAssertEqual("TypeScript", getLanguage(row: 1))
+        XCTAssertEqual("80794", getStarCount(row: 1))
     }
     
     func test_errorView_initialState() {
@@ -70,20 +70,24 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
         XCTAssertEqual(true, sut.loadingErrorView?.isHidden)
     }
     
-    func viewDidAppear() {
-        sut.beginAppearanceTransition(true, animated: true)
-        sut.endAppearanceTransition()
+    func test_errorView_ifAPiFail() {
+        
     }
 }
 
 //MARK: - For Testing
 
-private extension TrendingRepositoriesViewController {
+private extension TrendingRepositoriesViewControllerTests {
+    
+    func viewDidAppear() {
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+    }
     
     var userSection: Int { 0 }
     
     func numberOfSection() -> Int {
-        tableView.numberOfRows(inSection: userSection)
+        sut.tableView.numberOfRows(inSection: userSection)
     }
     
     func ownerName(row: Int) -> String? {
@@ -111,10 +115,11 @@ private extension TrendingRepositoriesViewController {
     }
     
     func repositoryCell(row: Int) -> TrendingRepositoryTableViewCellViewModelType? {
-        let dataSource = tableView.dataSource
+        let dataSource = sut.tableView.dataSource
         let indexPath = IndexPath(row: row, section: userSection)
-        let cell = dataSource?.tableView(tableView, cellForRowAt: indexPath) as? TrendingRepositoryTableViewCell
+        let cell = dataSource?.tableView(sut.tableView, cellForRowAt: indexPath) as? TrendingRepositoryTableViewCell
         return cell?.viewModel
     }
+  
     
 }
