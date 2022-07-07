@@ -44,6 +44,13 @@
 		6A6051642862D165008A5254 /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6051632862D165008A5254 /* OwnerModel.swift */; };
 		6A82F02028618A6B0093337C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A82F01F28618A6B0093337C /* ApiManager.swift */; };
 		6A82F024286193450093337C /* ApiManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A82F023286193450093337C /* ApiManagerTests.swift */; };
+		6AA9C93F2875A97A00B8ECDD /* RepositoryDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9C93D2875A97A00B8ECDD /* RepositoryDescriptionViewController.swift */; };
+		6AA9C9402875A97A00B8ECDD /* RepositoryDescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9C93E2875A97A00B8ECDD /* RepositoryDescriptionViewController.xib */; };
+		6AA9C9432875A9D300B8ECDD /* RepositoryDesciptionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9C9422875A9D300B8ECDD /* RepositoryDesciptionViewControllerTests.swift */; };
+		6AA9C9462875AB1400B8ECDD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9C9452875AB1400B8ECDD /* AppRouter.swift */; };
+		6AA9C94B2875AB5600B8ECDD /* AppRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9C94A2875AB5600B8ECDD /* AppRouterTests.swift */; };
+		6AA9C94D2875AC2800B8ECDD /* RepositoryDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9C94C2875AC2800B8ECDD /* RepositoryDescriptionViewModel.swift */; };
+		6AA9C94F2875AC3C00B8ECDD /* RepositoryDescriptionViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9C94E2875AC3C00B8ECDD /* RepositoryDescriptionViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +109,13 @@
 		6A6051632862D165008A5254 /* OwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
 		6A82F01F28618A6B0093337C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		6A82F023286193450093337C /* ApiManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManagerTests.swift; sourceTree = "<group>"; };
+		6AA9C93D2875A97A00B8ECDD /* RepositoryDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDescriptionViewController.swift; sourceTree = "<group>"; };
+		6AA9C93E2875A97A00B8ECDD /* RepositoryDescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDescriptionViewController.xib; sourceTree = "<group>"; };
+		6AA9C9422875A9D300B8ECDD /* RepositoryDesciptionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDesciptionViewControllerTests.swift; sourceTree = "<group>"; };
+		6AA9C9452875AB1400B8ECDD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		6AA9C94A2875AB5600B8ECDD /* AppRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouterTests.swift; sourceTree = "<group>"; };
+		6AA9C94C2875AC2800B8ECDD /* RepositoryDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDescriptionViewModel.swift; sourceTree = "<group>"; };
+		6AA9C94E2875AC3C00B8ECDD /* RepositoryDescriptionViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDescriptionViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +169,7 @@
 		6A2114072860AC3F000309D9 /* TakeHomeExercise */ = {
 			isa = PBXGroup;
 			children = (
+				6AA9C9442875AAE600B8ECDD /* NavigatonFlow */,
 				6A47F90128643C4B00915B25 /* Adapter */,
 				6A2114482860DBC2000309D9 /* App */,
 				6A2114492860DBE6000309D9 /* Scene */,
@@ -200,6 +215,7 @@
 		6A2114492860DBE6000309D9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				6AA9C93C2875A95A00B8ECDD /* RepositoryDesciption */,
 				6A47F94E28671DE100915B25 /* TrendingRepositoriesBuilder */,
 				6A47F8E928636E9E00915B25 /* TrendingRepositories */,
 			);
@@ -345,6 +361,8 @@
 		6A47F93C2866A1D400915B25 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				6AA9C9472875AB2300B8ECDD /* NavigationFlowTests */,
+				6AA9C9412875A9A500B8ECDD /* RepositoryDescriprionTests */,
 				6A47F93E2866A21500915B25 /* TrendingRepositoriesTests */,
 			);
 			path = Scene;
@@ -414,6 +432,41 @@
 				6A82F023286193450093337C /* ApiManagerTests.swift */,
 			);
 			path = BaseService;
+			sourceTree = "<group>";
+		};
+		6AA9C93C2875A95A00B8ECDD /* RepositoryDesciption */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9C93D2875A97A00B8ECDD /* RepositoryDescriptionViewController.swift */,
+				6AA9C93E2875A97A00B8ECDD /* RepositoryDescriptionViewController.xib */,
+				6AA9C94C2875AC2800B8ECDD /* RepositoryDescriptionViewModel.swift */,
+			);
+			path = RepositoryDesciption;
+			sourceTree = "<group>";
+		};
+		6AA9C9412875A9A500B8ECDD /* RepositoryDescriprionTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9C9422875A9D300B8ECDD /* RepositoryDesciptionViewControllerTests.swift */,
+				6AA9C94E2875AC3C00B8ECDD /* RepositoryDescriptionViewModelTests.swift */,
+			);
+			path = RepositoryDescriprionTests;
+			sourceTree = "<group>";
+		};
+		6AA9C9442875AAE600B8ECDD /* NavigatonFlow */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9C9452875AB1400B8ECDD /* AppRouter.swift */,
+			);
+			path = NavigatonFlow;
+			sourceTree = "<group>";
+		};
+		6AA9C9472875AB2300B8ECDD /* NavigationFlowTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9C94A2875AB5600B8ECDD /* AppRouterTests.swift */,
+			);
+			path = NavigationFlowTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,6 +585,7 @@
 			files = (
 				6A2114152860AC40000309D9 /* LaunchScreen.storyboard in Resources */,
 				6A47F9292865823900915B25 /* 4506-retry-and-user-busy-version-2.json in Resources */,
+				6AA9C9402875A97A00B8ECDD /* RepositoryDescriptionViewController.xib in Resources */,
 				6A2114122860AC40000309D9 /* Assets.xcassets in Resources */,
 				6A47F8F42864002800915B25 /* TrendingRepositoryTableViewCell.xib in Resources */,
 				6A47F932286585D300915B25 /* LoadingErrorView.xib in Resources */,
@@ -563,16 +617,19 @@
 				6A47F930286585B500915B25 /* LoadingErrorView.swift in Sources */,
 				6A82F02028618A6B0093337C /* ApiManager.swift in Sources */,
 				6A6051642862D165008A5254 /* OwnerModel.swift in Sources */,
+				6AA9C93F2875A97A00B8ECDD /* RepositoryDescriptionViewController.swift in Sources */,
 				6A6051602861F6B4008A5254 /* TrendModel.swift in Sources */,
 				6A258A762861C77E00F5429C /* TrendService.swift in Sources */,
 				6A47F8AE2862ED7900915B25 /* ItemModel.swift in Sources */,
 				6A47F8FD286421F200915B25 /* TrendingRepositoryTableViewCellViewModel.swift in Sources */,
 				6A47F91C286452F200915B25 /* TrendingRepositoriesViewModel.swift in Sources */,
+				6AA9C9462875AB1400B8ECDD /* AppRouter.swift in Sources */,
 				6A6051622862041F008A5254 /* TrendRepository.swift in Sources */,
 				6A47F90528643F3D00915B25 /* UIImageView+Extension.swift in Sources */,
 				6A60515E2861E2CD008A5254 /* Router.swift in Sources */,
 				6A47F938286648A500915B25 /* String+Extension.swift in Sources */,
 				6A47F95028671E3600915B25 /* TrendingRepositoriesBuilder.swift in Sources */,
+				6AA9C94D2875AC2800B8ECDD /* RepositoryDescriptionViewModel.swift in Sources */,
 				6A47F8EC28636EBC00915B25 /* BaseViewController.swift in Sources */,
 				6A47F92B286583F400915B25 /* UIView+Extension.swift in Sources */,
 				6A2114092860AC3F000309D9 /* AppDelegate.swift in Sources */,
@@ -588,11 +645,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AA9C9432875A9D300B8ECDD /* RepositoryDesciptionViewControllerTests.swift in Sources */,
 				6A82F024286193450093337C /* ApiManagerTests.swift in Sources */,
 				6A47F9402866A26E00915B25 /* TrendingRepositoriesViewModelTests.swift in Sources */,
 				6A47F94A2866E1F800915B25 /* TrendingRepositoryTableViewCellViewModelTests.swift in Sources */,
 				6A47F9432866A30E00915B25 /* TrendRepositoryStub.swift in Sources */,
+				6AA9C94B2875AB5600B8ECDD /* AppRouterTests.swift in Sources */,
 				6A47F9472866B02200915B25 /* TrendingRepositoriesViewControllerTests.swift in Sources */,
+				6AA9C94F2875AC3C00B8ECDD /* RepositoryDescriptionViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
