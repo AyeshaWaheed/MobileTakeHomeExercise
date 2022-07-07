@@ -25,15 +25,7 @@ class AppRouterTests: XCTestCase {
     }
     
     func test_isTopViewController_repositoryDescription() {
-        let expectedValue = "RepositoryDescriptionViewController"
         sut.open(description: "")
-        XCTAssertEqual(expectedValue, sut.root.topViewController?.nibName)
+        XCTAssertTrue(sut.root.topViewController is RepositoryDescriptionViewController)
     }
-    
-    func test_isRepositoryDescriptionVC_popped() {
-        sut.open(description: "")
-        sut.close()
-        XCTAssertNotEqual("RepositoryDescriptionViewController", sut.root.topViewController?.nibName)
-    }
-
 }

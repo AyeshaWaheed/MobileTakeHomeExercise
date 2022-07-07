@@ -21,11 +21,7 @@ class AppRouter: AppRouterType {
         self.root = root
     }
     
-    func open(description: String) {
-        let viewModel = RepositoryDescriptionViewModel(repositoryDescription: description)
-        let viewController = RepositoryDescriptionViewController(viewModel: viewModel)
-        root.pushViewController(viewController, animated: true)
-    }
+    func open(description: String) {}
     
     func close() {}
 }
