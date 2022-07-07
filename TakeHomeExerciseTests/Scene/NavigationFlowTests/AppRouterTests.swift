@@ -11,9 +11,12 @@ import XCTest
 class AppRouterTests: XCTestCase {
     
     private var sut: AppRouter!
+    private var rootStub: NavigationControllerStub!
 
     override func setUpWithError() throws {
-        sut = AppRouter(root: UINavigationController())
+        
+        rootStub = NavigationControllerStub()
+        sut = AppRouter(root: rootStub)
     }
 
     override func tearDownWithError() throws {
@@ -27,5 +30,20 @@ class AppRouterTests: XCTestCase {
     func test_isTopViewController_repositoryDescription() {
         sut.open(description: "")
         XCTAssertTrue(sut.root.topViewController is RepositoryDescriptionViewController)
+    }
+    
+    func test_isRepositoryDescriptionVC_popped() {
+        sut.open(description: "")
+        sut.close()
+        XCTAssertTrue(rootStub.popCalled)
+    }
+}
+
+class NavigationControllerStub: UINavigationController {
+
+    var popCalled: Bool = false
+    override func popViewController(animated: Bool) -> UIViewController? {
+        popCalled = true
+        return self.viewControllers.first
     }
 }
