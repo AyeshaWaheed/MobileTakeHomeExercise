@@ -27,5 +27,7 @@ class AppRouter: AppRouterType {
         root.pushViewController(viewController, animated: true)
     }
     
-    func close() {}
+    func close() {
+        root.popViewController(animated: true)
+    }
 }
