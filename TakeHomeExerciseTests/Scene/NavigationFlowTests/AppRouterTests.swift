@@ -39,7 +39,7 @@ class AppRouterTests: XCTestCase {
     }
 }
 
-class NavigationControllerStub: UINavigationController {
+final class NavigationControllerStub: UINavigationController {
 
     var popCalled: Bool = false
     override func popViewController(animated: Bool) -> UIViewController? {
