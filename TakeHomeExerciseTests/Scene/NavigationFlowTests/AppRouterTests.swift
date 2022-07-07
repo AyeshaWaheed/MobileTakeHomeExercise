@@ -23,5 +23,10 @@ class AppRouterTests: XCTestCase {
     func test_isRootNavigationController_set() {
         XCTAssertNotNil(sut.root)
     }
+    
+    func test_isTopViewController_repositoryDescription() {
+        let expectedValue = "RepositoryDescriptionViewController"
+        XCTAssertEqual(expectedValue, sut.root.topViewController?.nibName)
+    }
 
 }
