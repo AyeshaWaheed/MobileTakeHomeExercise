@@ -17,7 +17,9 @@ class AppRouter: AppRouterType {
 
     private(set) var root: UINavigationController!
     
-    init() {}
+    init(root: UINavigationController) {
+        self.root = root
+    }
     
     func open(description: String) {}
     

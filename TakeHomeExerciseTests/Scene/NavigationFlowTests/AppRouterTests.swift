@@ -13,7 +13,7 @@ class AppRouterTests: XCTestCase {
     private var sut: AppRouter!
 
     override func setUpWithError() throws {
-        sut = AppRouter()
+        sut = AppRouter(root: UINavigationController())
     }
 
     override func tearDownWithError() throws {
