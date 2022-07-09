@@ -51,6 +51,11 @@ class TrendingRepositoriesViewModelTests: XCTestCase {
         XCTAssertNotNil(sut.cellForRowAtIndexPath(indexPath: IndexPath(row: 0, section: 0)))
     }
     
+    func test_didSelectRowAt() {
+        sut.getTrendingRepositories()
+        XCTAssertEqual("The Go programming language", sut.didSelectRowAt(indexPath: IndexPath(row: 0, section: 0)))
+    }
+    
     func expectedMockData() -> TrendModel {
         return TrendModel(items: [
             ItemModel(name: "go", description: "The Go programming language", language: "Go", stargazers_count: 100876, owner: OwnerModel(login: "golang", avatar_url: "https://avatars.githubusercontent.com/u/4314092?v=4")),

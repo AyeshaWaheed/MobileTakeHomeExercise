@@ -17,6 +17,7 @@ protocol TrendingRepositoriesViewModelType {
     func prefetchImages()
     var reloadTableView: (()->())? { get set }
     var loadingErrorView: (()->())? { get set }
+    func didSelectRowAt(indexPath: IndexPath) -> String
 }
 
 class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
@@ -69,6 +70,10 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     func prefetchImages() {
         let urls: [URL] = itemModel.compactMap { URL(string: $0.owner.avatar_url) }
         ImageLoadAdapter().prefetchImages(urls: urls)
+    }
+    
+    func didSelectRowAt(indexPath: IndexPath) -> String {
+        ""
     }
 }
 
