@@ -53,7 +53,7 @@ class TrendingRepositoriesViewModelTests: XCTestCase {
     
     func test_didSelectRowAt() {
         sut.getTrendingRepositories()
-        XCTAssertEqual("The Go programming language", sut.didSelectRowAt(indexPath: IndexPath(row: 0, section: 0)))
+        XCTAssertEqual(expectedMockData().items[0].description, sut.didSelectRowAt(indexPath: IndexPath(row: 0, section: 0)))
     }
     
     func expectedMockData() -> TrendModel {
