@@ -73,7 +73,7 @@ class TrendingRepositoriesViewModel: TrendingRepositoriesViewModelType {
     }
     
     func didSelectRowAt(indexPath: IndexPath) -> String {
-        ""
+        itemModel[indexPath.row].description
     }
 }
 
