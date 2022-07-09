@@ -7,12 +7,13 @@
 
 import UIKit
 
-class RepositoryDescriptionViewController: UIViewController {
+final  class RepositoryDescriptionViewController: UIViewController {
     
     //MARK: - Properties
     
     private(set) var viewModel: RepositoryDescriptionViewModelType!
-
+    @IBOutlet private weak var repositoryDescription: UILabel!
+    
     //MARK: - Init
     
     init(viewModel: RepositoryDescriptionViewModelType) {
@@ -27,12 +28,12 @@ class RepositoryDescriptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bind()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        _ = viewModel.getRepositoryDescription()
-    }
+}
 
+//MARK: - Bind
+
+extension RepositoryDescriptionViewController {
+    func bind() {}
 }

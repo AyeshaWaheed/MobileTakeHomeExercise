@@ -40,9 +40,9 @@ class RepositoryDesciptionViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.viewModel)
     }
     
-    func test_viewDidAppear_fetchRepositoryDetail() {
-        sut.viewDidAppear(true)
-        XCTAssertTrue(viewModelStub.fetchDetail)
+    func test_viewDidLoad_bindRepositoryDescription() {
+        sut.loadViewIfNeeded()
+        XCTAssertTrue(viewModelStub.isRepositoryDescriptionBind)
     }
     
 
@@ -51,10 +51,10 @@ class RepositoryDesciptionViewControllerTests: XCTestCase {
 
 class RepositoryDescriptionViewModelStub: RepositoryDescriptionViewModelType {
     
-    var fetchDetail: Bool = false
+    var isRepositoryDescriptionBind: Bool = false
     
     func getRepositoryDescription() -> String {
-        fetchDetail = true
+        isRepositoryDescriptionBind = true
         return "abcd testing"
     }
 }
