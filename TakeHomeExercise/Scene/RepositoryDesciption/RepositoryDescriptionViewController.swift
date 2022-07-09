@@ -35,5 +35,7 @@ final  class RepositoryDescriptionViewController: UIViewController {
 //MARK: - Bind
 
 extension RepositoryDescriptionViewController {
-    func bind() {}
+    func bind() {
+        repositoryDescription.text = viewModel.getRepositoryDescription()
+    }
 }
