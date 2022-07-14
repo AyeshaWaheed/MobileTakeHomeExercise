@@ -94,8 +94,7 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
     
     func test_didSelectRow_delegateOpenCalled() {
         viewDidAppear()
-        let indexPath = IndexPath(row: 1, section: userSection)
-        sut.tableView(sut.tableView, didSelectRowAt: indexPath)
+        didSelectRowCall(row: 1)
         if let appRouterStub = sut.routerDelegate as? AppRouterStub {
             XCTAssertEqual(true, appRouterStub.isOpenCalled)
         }
@@ -151,6 +150,11 @@ private extension TrendingRepositoriesViewControllerTests {
         let indexPath = IndexPath(row: row, section: userSection)
         let cell = dataSource?.tableView(sut.tableView, cellForRowAt: indexPath) as? TrendingRepositoryTableViewCell
         return cell?.viewModel
+    }
+    
+    func didSelectRowCall(row: Int) {
+        let indexPath = IndexPath(row: row, section: userSection)
+        sut.tableView(sut.tableView, didSelectRowAt: indexPath)
     }
 }
 
