@@ -13,6 +13,7 @@ final class TrendingRepositoriesViewController: BaseViewController {
     
     private var viewModel: TrendingRepositoriesViewModelType!
     private let refreshControl = UIRefreshControl()
+    var routerDelegate: AppRouterType?
     
     // MARK: - Init
     
