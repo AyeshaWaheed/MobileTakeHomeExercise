@@ -167,6 +167,10 @@ extension TrendingRepositoriesViewController: UITableViewDelegate, UITableViewDa
             cell.loadImage()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let repositoryDescription = viewModel.didSelectRowAt(indexPath: indexPath)
+    }
 }
 
 

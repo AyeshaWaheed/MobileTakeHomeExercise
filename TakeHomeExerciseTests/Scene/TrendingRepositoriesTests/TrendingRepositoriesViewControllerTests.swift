@@ -21,13 +21,17 @@ enum TrendingRepositoriesTestsStrings {
 class TrendingRepositoriesViewControllerTests: XCTestCase {
     
     private var sut: TrendingRepositoriesViewController!
+    private var appRouterStub: AppRouterStub!
     
     override func setUpWithError() throws {
         sut = TrendingRepositoriesViewController(viewModel: makeBuilder())
+        appRouterStub = AppRouterStub(root: UINavigationController())
+        sut.routerDelegate = appRouterStub
     }
 
     override func tearDownWithError() throws {
         sut = nil
+        appRouterStub = nil
     }
 
     func test_file_nibName() {
@@ -87,6 +91,15 @@ class TrendingRepositoriesViewControllerTests: XCTestCase {
 //
 //        XCTAssertEqual(false, sut.loadingErrorView?.isHidden)
 //    }
+    
+    func test_didSelectRow_delegateOpenCalled() {
+        viewDidAppear()
+        let indexPath = IndexPath(row: 1, section: userSection)
+        sut.tableView(sut.tableView, didSelectRowAt: indexPath)
+        if let appRouterStub = sut.routerDelegate as? AppRouterStub {
+            XCTAssertEqual(true, appRouterStub.isOpenCalled)
+        }
+    }
 }
 
 //MARK: - For Testing
@@ -138,5 +151,13 @@ private extension TrendingRepositoriesViewControllerTests {
         let indexPath = IndexPath(row: row, section: userSection)
         let cell = dataSource?.tableView(sut.tableView, cellForRowAt: indexPath) as? TrendingRepositoryTableViewCell
         return cell?.viewModel
+    }
+}
+
+class AppRouterStub: AppRouter {
+    
+    var isOpenCalled = false
+    override func open(description: String) {
+        isOpenCalled = true
     }
 }

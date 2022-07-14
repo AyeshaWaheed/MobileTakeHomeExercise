@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCO-oc-2OY">
-                    <rect key="frame" x="186.5" y="443" width="41.5" height="20.5"/>
+                    <rect key="frame" x="20" y="443" width="374" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -31,6 +31,8 @@
             <constraints>
                 <constraint firstItem="rCO-oc-2OY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1aG-BI-j8q"/>
                 <constraint firstItem="rCO-oc-2OY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="YFR-u4-NFJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rCO-oc-2OY" secondAttribute="trailing" constant="20" id="ux3-tT-yDX"/>
+                <constraint firstItem="rCO-oc-2OY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yLy-MM-z3C"/>
             </constraints>
             <point key="canvasLocation" x="139" y="100"/>
         </view>
