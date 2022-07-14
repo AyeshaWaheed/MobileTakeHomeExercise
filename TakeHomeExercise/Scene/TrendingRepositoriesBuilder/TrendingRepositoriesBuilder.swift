@@ -13,9 +13,10 @@ final class TrendingRepositoriesBuilder {
         let service = TrendService(apiManager: ApiManager())
         let repository = TrendRepository(trendService: service)
         let viewModel = TrendingRepositoriesViewModel(repository: repository)
-        let navigationVC = UINavigationController.withNavigationBar(
-            rootViewController: TrendingRepositoriesViewController(viewModel: viewModel)
-        )
+        let viewController = TrendingRepositoriesViewController(viewModel: viewModel)
+        let navigationVC = UINavigationController.withNavigationBar(rootViewController: viewController)
+        let router = AppRouter(root: navigationVC)
+        viewController.routerDelegate = router
         return navigationVC
     }
 }
