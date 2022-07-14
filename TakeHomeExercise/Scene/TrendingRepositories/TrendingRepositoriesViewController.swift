@@ -170,6 +170,7 @@ extension TrendingRepositoriesViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let repositoryDescription = viewModel.didSelectRowAt(indexPath: indexPath)
+        routerDelegate?.open(description: repositoryDescription)
     }
 }
 
